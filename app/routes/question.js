@@ -14,6 +14,10 @@ export default Ember.Route.extend({
       });
     this.transitionTo('question', question);
     },
+    destroyAnswer(answer) {
+      answer.destroyRecord();
+      this.transitionTo('question');
+    },
     deleteQuestion(question) {
       if (confirm('Are you sure you want to delete this question?')) {
         question.destroyRecord();
