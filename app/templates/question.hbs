@@ -4,3 +4,11 @@
 {{question-update model=model updateQuestion="updateQuestion"}}
 <button {{action 'deleteQuestion' model}}>Delete</button>
 <br>
+
+<h4>Answers:</h4>
+
+<ul>
+  {{#each model.answers as |answer|}}
+    {{answer-tile answer=answer destroyAnswer="destroyAnswer"}}
+  {{/each}}
+</ul>
