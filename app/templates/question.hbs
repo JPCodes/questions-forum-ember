@@ -1,5 +1,6 @@
 <h2>{{model.author}} asks:</h2>
 <h4>{{model.title}}</h4>
 <p>Details: {{model.note}}</p>
+{{question-update model=model updateQuestion="updateQuestion"}}
 <button {{action 'deleteQuestion' model}}>Delete</button>
 <br>
