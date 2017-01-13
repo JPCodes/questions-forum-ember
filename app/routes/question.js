@@ -19,10 +19,13 @@ export default Ember.Route.extend({
       this.transitionTo('question');
     },
     deleteQuestion(question) {
-      if (confirm('Are you sure you want to delete this question?')) {
-        question.destroyRecord();
-        this.transitionTo('index');
-      }
+      var answer_deletions = question.get('answers').map(function(answer) {
+        return answer.destroyRecord();
+      });
+      Ember.RSVP.all(answer_deletions).then(function() {
+        return question.destroyRecord();
+      });
+      this.transitionTo('index');
     },
     updateQuestion(question, params) {
       Object.keys(params).forEach(function(key) {
