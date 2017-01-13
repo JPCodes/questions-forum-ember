@@ -6,9 +6,11 @@
 <br>
 
 <h4>Answers:</h4>
-
 <ul>
   {{#each model.answers as |answer|}}
     {{answer-tile answer=answer destroyAnswer="destroyAnswer"}}
   {{/each}}
 </ul>
+
+
+{{new-answer saveAnswer="saveAnswer" question=model}}

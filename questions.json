@@ -10,5 +10,17 @@
     "author": "Coder McCoderson",
     "title": "What is the meaning of basketball?",
     "note": "Been having trouble with basketball, please halp!"
+  },
+  {
+    "author": "Code guy",
+    "title": "what's in the box?",
+    "note": "I JUST NEED TO KNOW -- WHAT'S IN THE BOX?"
+  }],
+  "answers": [{
+    "username": "Andrea",
+    "comment": "Did not fall down."
+  }, {
+    "username": "Alex",
+    "comment": "Nice view of the volcano!"
   }]
 }
